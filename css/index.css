@@ -24,6 +24,10 @@ h1, h2 {
     color: #1f2933;
 }
 
+h2 {
+    font-size: 56px;
+}
+
 p {
     max-width: 800px;
     text-align: center;
@@ -68,35 +72,72 @@ p {
 }
 
 .about-text {
-    flex: 1;
+    flex: 2;
     font-size: 32px;
 }
 
 .about-image {
-    flex: 1;
+    flex: 0 0 250px;
     height: 250px;
-    background-color: #e0e0e0; /* placeholder color */
     border-radius: 8px;
+    overflow: hidden; /* IMPORTANT */
 }
 
-/* PROJECTS */
-#projects {
-    background-color: #000000;
-}
-
-.project {
+.about-image img {
     width: 100%;
-    max-width: 700px;
-    background-color: #f5f5f5;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* PROJECTS SECTION */
+#projects {
+    padding: 50px;
+    margin-top: 80px;
+}
+
+/* Container holding all cards */
+.projects-container {
+    display: flex;
+    gap: 25px;
+}
+
+/* Each project card */
+.project-card {
+    background-color: #ffffff;
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image placeholder on top */
+.project-image {
+    height: 170px;
+    background-color: #d1d5db;
+}
+
+/* Text content below */
+.project-content {
     padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid #1f2933;
+}
+
+.project-content h3 {
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 14px;
+    margin-bottom: 8px;
 }
 
 /* CONTACT */
 #contact {
     background-color: #1f2933;
     color: white;
+    min-height: auto;
+    padding: 40px 20px;
+
 }
 
 #contact h2,
@@ -109,4 +150,23 @@ p {
         flex-direction: column;
         text-align: center;
     }
+}
+
+
+.animated-bg {
+    background: linear-gradient(
+        270deg,
+        #ffffff,
+        #919191,
+        #b4b4b4
+    );
+    background-size: 600% 600%;
+    padding: 60px 20px;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
