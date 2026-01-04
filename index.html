@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>E-Portfolio - MIGS</title>
+    <title>E-Portfolio - Migs</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
 </head>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function() {
+    emailjs.init("F17PK1QMIrPIZ02rU");
+})();
+</script>
+
+
 <body>
 
     <!-- INTRODUCTION (PAGE 1) -->
@@ -104,24 +113,25 @@
     <section id="contactme1">
         <h2>Contact me:</h2>
 
-        <form class="contact-form">
-            <div class="form-group">
-                <label>Name:</label>
-                <input type="text" placeholder="Your name">
-            </div>
+    <form class="contact-form" id="contactForm">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="from_name" placeholder="Your name" required autocomplete="off">
+        </div>
 
-            <div class="form-group">
-                <label>Email:</label>
-                <input type="email" placeholder="Your email">
-            </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="from_email" placeholder="Your email" required>
+        </div>
 
-            <div class="form-group">
-                <label>Message:</label>
-                <textarea rows="6" placeholder="Your message"></textarea>
-            </div>
+        <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="6" placeholder="Your message" required autocomplete="off"></textarea>
+        </div>
 
-            <button class="contact-btn">Send Message</button>
-        </form>
+        <button type="submit" class="contact-btn">Send Message</button>
+    </form>
+
     </section>
 
 
@@ -129,6 +139,8 @@
 </div>
 
     <!-- CONTACT (PAGE 4) -->
+<footer>
+
 <section id="contact">
     <h2>Contacts</h2>
 
@@ -146,6 +158,8 @@
     </p>
 </section>
 
+<script src="/js/index.js"></script>
+</footer>
 </body>
 </html>
 

@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #0f6cbd; /* Brand blue for main actions/buttons */
+  --text-color: #333333;     /* Dark gray for most text */
+  --background-color: #ffffff; /* White background */
+  --accent-color: #d13438;   /* Red for errors or highlights */
+
+  --primary-bg: #0b1956;
+  --secondary-bg: #faf3eb;
+  --accent-bg: #e5d8c7;
+  --highlight-bg: #9ecdfb
+}
