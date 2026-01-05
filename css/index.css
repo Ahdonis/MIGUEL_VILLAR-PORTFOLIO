@@ -19,19 +19,26 @@ section {
     align-items: center;
 }
 
-h1, h2 {
+h1, h2{
     margin-bottom: 20px;
-    color: #1f2933;
+    color: #faf3eb;
+    font-size: 2.5rem;
+    text-shadow:
+        -1px -1px 0 black, /* Top-left shadow */
+         1px -1px 0 black, /* Top-right shadow */
+        -1px  1px 0 black, /* Bottom-left shadow */
+         1px  1px 0 black;  /* Bottom-right shadow */
 }
 
-h2 {
-    font-size: 56px;
+h3 {
+    font-size: 2rem;
 }
 
 p {
     max-width: 800px;
     text-align: center;
     line-height: 1.6;
+    font-size: 1.5rem;
 }
 
 /* INTRO SECTION */
@@ -73,7 +80,7 @@ p {
 
 #intro h1,
 #intro p {
-    color: white;
+    color: #faf3eb;
 }
 
 .name-tag {
@@ -81,6 +88,7 @@ p {
     font-size: 48px;
     font-weight: bold;
     z-index: 2; /* FOREGROUND */
+    color: #faf3eb;
 
 }
 
@@ -98,6 +106,7 @@ p {
 /* ABOUT */
 #about {
     padding: 40px;
+    
 }
 
 .about-container {
@@ -108,7 +117,8 @@ p {
 
 .about-text {
     flex: 2;
-    font-size: 32px;
+    color: #faf3eb;
+    text-align: left;
 }
 
 .about-image {
@@ -140,11 +150,20 @@ p {
 /* Each project card */
 .project-card {
     background-color: #ffffff;
-    border: 1px solid #000000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     width: 500px;
-    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+
+    /* INTERACTION */
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 /* Image placeholder on top */
@@ -160,6 +179,13 @@ p {
     display: block;
 }
 
+.project-image img:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+}
+
 /* Text content below */
 .project-content {
     padding: 20px;
@@ -167,11 +193,11 @@ p {
 
 .project-content h3 {
     margin-bottom: 10px;
-    font-size: 32px;
 }
 
 .project-content p {
-    font-size: 24px;
+    font-size: 1.5rem;
+    text-align: left;
     margin-bottom: 8px;
 }
 
@@ -182,6 +208,15 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#contactme1 h2 {
+    text-shadow:
+        -1px -1px 0 black, /* Top-left shadow */
+         1px -1px 0 black, /* Top-right shadow */
+        -1px  1px 0 black, /* Bottom-left shadow */
+         1px  1px 0 black;  /* Bottom-right shadow */
+
 }
 
 /* CONTACT FORM */
@@ -200,7 +235,16 @@ p {
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 36px;
-}
+    color: #faf3eb;
+    
+    text-shadow:
+        -1px -1px 0 black, /* Top-left shadow */
+         1px -1px 0 black, /* Top-right shadow */
+        -1px  1px 0 black, /* Bottom-left shadow */
+         1px  1px 0 black;  /* Bottom-right shadow */
+
+    
+    }
 
 .form-group input,
 .form-group textarea {
@@ -208,24 +252,23 @@ p {
     border-radius: 6px;
     border: none;
     font-size: 28px;
-    
+    border: #000000 1px solid;
 }
 
 .contact-button {
     width: 100%;
     padding: 16px;
     background-color: #0f6cbd;
-    border: 3px solid #000000;
+    border: 2px solid #000000;
     color: #faf3eb;
     font-size: 32px;
-    border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
 
-.contact-btn:hover {
-    background-color: #0b1956;
+.contact-button:hover {
+    background-color: #112682;
 }
 
 
@@ -247,7 +290,6 @@ p {
 
 @media (max-width: 768px) {
     .about-container {
-        flex-direction: column;
         text-align: center;
     }
 }
@@ -256,9 +298,9 @@ p {
 .animated-bg {
     background: linear-gradient(
         270deg,
-        #ebf1fa,
-        #0276e9,
-        #ebf1fa
+        #79aeff,
+        #005cb7,
+        #79aeff
     );
     background-size: 600% 600%;
     padding: 60px 20px;
