@@ -22,7 +22,7 @@ section {
 h1, h2{
     margin-bottom: 20px;
     color: #faf3eb;
-    font-size: 2.5rem;
+    font-size: 4rem;
     text-shadow:
         -1px -1px 0 black, /* Top-left shadow */
          1px -1px 0 black, /* Top-right shadow */
@@ -133,6 +133,27 @@ p {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.about-buttons button {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #000080;
+}
+
+.about-buttons button:hover {
+    background-color: #3459ff;
+    color: #faf3eb;
 }
 
 /* PROJECTS SECTION */
@@ -311,4 +332,8 @@ p {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+hr.solid {
+  border-top: 3px solid #000000;
 }
